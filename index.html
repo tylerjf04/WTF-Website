@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WTF — What The Fork | Billerica, MA</title>
+  <meta name="description" content="What The Fork — Billerica's boldest burgers, cheesesteaks, and loaded fries. Food truck & catering. Call 978-729-4757." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@400;500;600;700&family=Barlow:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════════
+       NAV
+  ═══════════════════════════════════════════ -->
+  <header class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="#" class="nav__logo">
+        <!-- Drop logo.png into src/images/ to replace -->
+        <img src="src/images/logo.png" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" alt="WTF Catering Logo" />
+        <span class="nav__logo-fallback">WTF</span>
+      </a>
+      <nav class="nav__links">
+        <a href="#menu">Menu</a>
+        <a href="#about">About</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#catering">Catering</a>
+        <a href="#hours">Hours</a>
+      </nav>
+      <a href="tel:9787294757" class="btn btn--red nav__cta">📞 Call Now</a>
+      <button class="nav__burger" id="navBurger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="nav__mobile" id="navMobile">
+      <a href="#menu" class="nav__mobile-link">Menu</a>
+      <a href="#about" class="nav__mobile-link">About</a>
+      <a href="#gallery" class="nav__mobile-link">Gallery</a>
+      <a href="#catering" class="nav__mobile-link">Catering</a>
+      <a href="#hours" class="nav__mobile-link">Hours</a>
+      <a href="tel:9787294757" class="btn btn--red nav__mobile-cta">📞 978-729-4757</a>
+    </div>
+  </header>
+
+  <!-- ═══════════════════════════════════════════
+       HERO
+  ═══════════════════════════════════════════ -->
+  <section class="hero" id="home">
+    <div class="hero__slides" aria-hidden="true">
+      <div class="hero__slide" style="background-image:url('src/images/menu-banner.jpg'),url('https://images.pexels.com/photos/8250195/pexels-photo-8250195.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&dpr=1')"></div>
+      <div class="hero__slide" style="background-image:url('https://images.pexels.com/photos/11519323/pexels-photo-11519323.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&dpr=1')"></div>
+      <div class="hero__slide" style="background-image:url('https://images.pexels.com/photos/36909517/pexels-photo-36909517.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&dpr=1')"></div>
+      <div class="hero__slide" style="background-image:url('https://images.pexels.com/photos/4253700/pexels-photo-4253700.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&dpr=1')"></div>
+    </div>
+    <div class="hero__overlay"></div>
+    <div class="hero__content">
+      <div class="hero__eyebrow">Billerica, MA &mdash; Food Truck &amp; Catering</div>
+      <h1 class="hero__wtf">WTF</h1>
+      <h2 class="hero__name">What The Fork</h2>
+      <p class="hero__sub">Burgers. Cheesesteaks. Loaded Fries.<br />No apologies.</p>
+      <div class="hero__ctas">
+        <a href="#menu" class="btn btn--red btn--lg">See the Menu</a>
+        <a href="#catering" class="btn btn--outline btn--lg">Book Catering</a>
+      </div>
+      <div class="hero__phone">
+        <a href="tel:9787294757">978-729-4757</a>
+        <span>&nbsp;|&nbsp;</span>
+        <a href="tel:9787290143">978-729-0143</a>
+      </div>
+    </div>
+    <div class="hero__3d" id="heroBurgerWrap"></div>
+    <a href="#trust" class="hero__scroll" aria-label="Scroll down">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12l7 7 7-7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </a>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       HOURS / TRUST BAR
+  ═══════════════════════════════════════════ -->
+  <div class="ticker" id="trust">
+    <div class="ticker__track">
+      <span>🔥 NOW OPEN</span>
+      <span class="ticker__dot">·</span>
+      <span>TUE–THU: 5–9PM</span>
+      <span class="ticker__dot">·</span>
+      <span>FRI: 11AM–1:30PM &amp; 5–9PM</span>
+      <span class="ticker__dot">·</span>
+      <span>SAT: 5–9PM</span>
+      <span class="ticker__dot">·</span>
+      <span>SUN: NOON–6PM</span>
+      <span class="ticker__dot">·</span>
+      <span>📞 978-729-4757</span>
+      <span class="ticker__dot">·</span>
+      <span>🔥 NOW OPEN</span>
+      <span class="ticker__dot">·</span>
+      <span>TUE–THU: 5–9PM</span>
+      <span class="ticker__dot">·</span>
+      <span>FRI: 11AM–1:30PM &amp; 5–9PM</span>
+      <span class="ticker__dot">·</span>
+      <span>SAT: 5–9PM</span>
+      <span class="ticker__dot">·</span>
+      <span>SUN: NOON–6PM</span>
+      <span class="ticker__dot">·</span>
+      <span>📞 978-729-4757</span>
+      <span class="ticker__dot">·</span>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════
+       BRAND BANNER IMAGE
+  ═══════════════════════════════════════════ -->
+  <section class="banner-section">
+    <div class="container">
+      <!-- Drop menu-banner.jpg into src/images/ — the full WTF promo graphic -->
+      <img
+        src="src/images/menu-banner.jpg"
+        onerror="this.parentElement.parentElement.style.display='none'"
+        alt="WTF What The Fork Billerica Menu"
+        class="banner-section__img"
+      />
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       MENU
+  ═══════════════════════════════════════════ -->
+  <section class="menu-section" id="menu">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">The Goods</span>
+        <h2 class="section-title">THE MENU</h2>
+        <div class="fire-divider"></div>
+      </div>
+
+      <div class="menu-grid">
+
+        <div class="menu-cat">
+          <div class="menu-cat__header">
+            <span class="menu-cat__icon">🍔</span>
+            <h3>BURGERS</h3>
+          </div>
+          <div class="menu-cat__img">
+            <img src="src/images/burger.jpg" onerror="this.src='https://images.pexels.com/photos/8250195/pexels-photo-8250195.jpeg?auto=compress&cs=tinysrgb&w=800&h=500&dpr=1'" alt="WTF Burger" loading="lazy" />
+          </div>
+          <div class="menu-cat__items">
+            <div class="menu-row">
+              <span>WTF Classic Burger</span>
+              <span class="menu-price">Market</span>
+            </div>
+            <div class="menu-row">
+              <span>Double Stack Smash</span>
+              <span class="menu-price">Market</span>
+            </div>
+            <div class="menu-row">
+              <span>Bacon Cheese Bomb</span>
+              <span class="menu-price">Market</span>
+            </div>
+            <div class="menu-row">
+              <span>Crispy Chicken Sandwich</span>
+              <span class="menu-price">Market</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-cat menu-cat--featured">
+          <div class="menu-cat__badge">🔥 Fan Favorite</div>
+          <div class="menu-cat__header">
+            <span class="menu-cat__icon">🥩</span>
+            <h3>CHEESESTEAKS</h3>
+          </div>
+          <div class="menu-cat__img">
+            <img src="src/images/cheesesteak.jpg" onerror="this.src='https://images.pexels.com/photos/6205791/pexels-photo-6205791.jpeg?auto=compress&cs=tinysrgb&w=800&h=500&dpr=1'" alt="WTF Cheesesteak" loading="lazy" />
+          </div>
+          <div class="menu-cat__items">
+            <div class="menu-row">
+              <span>WTF Philly Cheesesteak</span>
+              <span class="menu-price">Market</span>
+            </div>
+            <div class="menu-row">
+              <span>Chicken Cheesesteak</span>
+              <span class="menu-price">Market</span>
+            </div>
+            <div class="menu-row">
+              <span>Pepper Jack Steak Sub</span>
+              <span class="menu-price">Market</span>
+            </div>
+            <div class="menu-row">
+              <span>Jalapeño Steak Bomb</span>
+              <span class="menu-price">Market</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-cat">
+          <div class="menu-cat__header">
+            <span class="menu-cat__icon">🍟</span>
+            <h3>LOADED FRIES</h3>
+          </div>
+          <div class="menu-cat__img">
+            <img src="src/images/fries.jpg" onerror="this.src='https://images.pexels.com/photos/70497/pexels-photo-70497.jpeg?auto=compress&cs=tinysrgb&w=800&h=500&dpr=1'" alt="Loaded Fries" loading="lazy" />
+          </div>
+          <div class="menu-cat__items">
+            <div class="menu-row">
+              <span>WTF Disco Fries</span>
+              <span class="menu-price">Market</span>
+            </div>
+            <div class="menu-row">
+              <span>Loaded Cheese Fries</span>
+              <span class="menu-price">Market</span>
+            </div>
+            <div class="menu-row">
+              <span>Bacon Ranch Fries</span>
+              <span class="menu-price">Market</span>
+            </div>
+            <div class="menu-row">
+              <span>Regular Fries</span>
+              <span class="menu-price">Market</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="menu-note-block">
+        <p>🔥 Menu and pricing updated regularly. Call or text for today's specials.</p>
+        <a href="tel:9787294757" class="btn btn--red">978-729-4757</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       ABOUT / IDENTITY
+  ═══════════════════════════════════════════ -->
+  <section class="about-section" id="about">
+    <div class="about-section__bg">
+      <img src="https://images.pexels.com/photos/33691815/pexels-photo-33691815.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&dpr=1" alt="Grill fire" class="about-section__bgimg" loading="lazy" />
+      <div class="about-section__overlay"></div>
+    </div>
+    <div class="container about-section__inner">
+      <div class="about-section__logo">
+        <img src="src/images/logo.png" onerror="this.style.display='none'" alt="What The Fork Catering Logo" />
+      </div>
+      <div class="about-section__content">
+        <span class="section-label section-label--fire">Who We Are</span>
+        <h2 class="section-title section-title--light">We Don't Do<br />Average Food.</h2>
+        <p>What The Fork started in Billerica as a simple idea: make food that actually slaps. Chef-crafted burgers, real Philly-style cheesesteaks, and loaded fries that'll ruin every other fries for you.</p>
+        <p>We run a food truck and a full catering operation — from block parties to corporate events to weddings. We show up, we cook, you look like a hero.</p>
+        <div class="about-section__stats">
+          <div class="about-stat">
+            <strong>500<span>+</span></strong>
+            <span>Events Catered</span>
+          </div>
+          <div class="about-stat">
+            <strong>5★</strong>
+            <span>Google Rating</span>
+          </div>
+          <div class="about-stat">
+            <strong>100%</strong>
+            <span>Licensed &amp; Insured</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       GALLERY
+  ═══════════════════════════════════════════ -->
+  <section class="gallery-section" id="gallery">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">The Proof</span>
+        <h2 class="section-title">EAT WITH YOUR EYES</h2>
+        <div class="fire-divider"></div>
+      </div>
+      <div class="gallery-grid">
+        <div class="gallery-item gallery-item--tall">
+          <img src="src/images/gallery-1.jpg" onerror="this.src='https://images.pexels.com/photos/8879373/pexels-photo-8879373.jpeg?auto=compress&cs=tinysrgb&w=700&h=1000&dpr=1'" alt="WTF Burger" loading="lazy" />
+        </div>
+        <div class="gallery-item">
+          <img src="src/images/gallery-2.jpg" onerror="this.src='https://images.pexels.com/photos/9406094/pexels-photo-9406094.jpeg?auto=compress&cs=tinysrgb&w=700&h=500&dpr=1'" alt="Smash burger" loading="lazy" />
+        </div>
+        <div class="gallery-item">
+          <img src="src/images/gallery-3.jpg" onerror="this.src='https://images.pexels.com/photos/11185910/pexels-photo-11185910.jpeg?auto=compress&cs=tinysrgb&w=700&h=500&dpr=1'" alt="Loaded fries" loading="lazy" />
+        </div>
+        <div class="gallery-item gallery-item--wide">
+          <img src="src/images/gallery-4.jpg" onerror="this.src='https://images.pexels.com/photos/18824001/pexels-photo-18824001.jpeg?auto=compress&cs=tinysrgb&w=1200&h=500&dpr=1'" alt="On the grill" loading="lazy" />
+        </div>
+        <div class="gallery-item">
+          <img src="src/images/gallery-5.jpg" onerror="this.src='https://images.pexels.com/photos/4253700/pexels-photo-4253700.jpeg?auto=compress&cs=tinysrgb&w=700&h=500&dpr=1'" alt="Burger" loading="lazy" />
+        </div>
+        <div class="gallery-item">
+          <img src="src/images/gallery-6.jpg" onerror="this.src='https://images.pexels.com/photos/6205791/pexels-photo-6205791.jpeg?auto=compress&cs=tinysrgb&w=700&h=500&dpr=1'" alt="Cheesesteak" loading="lazy" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       CATERING
+  ═══════════════════════════════════════════ -->
+  <section class="catering-section" id="catering">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Book Us</span>
+        <h2 class="section-title">WTF CATERING</h2>
+        <div class="fire-divider"></div>
+        <p class="section-sub">Closed tonight for catering. Again.<br />Because people keep booking us. Can't blame them.</p>
+      </div>
+
+      <div class="catering-grid">
+        <div class="catering-card">
+          <div class="catering-card__icon">🍖</div>
+          <h3>Backyard BBQ &amp; Cookouts</h3>
+          <p>Block parties, family cookouts, graduation parties. We bring the grill, you bring the guests.</p>
+        </div>
+        <div class="catering-card catering-card--featured">
+          <div class="catering-card__badge">Most Booked</div>
+          <div class="catering-card__icon">🎉</div>
+          <h3>Full Event Catering</h3>
+          <p>Weddings, corporate events, showers, milestones. Setup, service, and cleanup — all handled.</p>
+        </div>
+        <div class="catering-card">
+          <div class="catering-card__icon">💼</div>
+          <h3>Corporate &amp; Business</h3>
+          <p>Team lunches, office parties, client events. Make your company event the one everyone talks about.</p>
+        </div>
+      </div>
+
+      <div class="quote-wrap">
+        <div class="quote-form-box">
+          <h3 class="quote-form-box__title">Get a Catering Quote</h3>
+          <p class="quote-form-box__sub">Fill this out. We'll hit you back within 24 hours.</p>
+          <form class="quote-form" id="quoteForm" novalidate>
+            <div class="form-step active" id="step1">
+              <div class="form-row-2">
+                <div class="form-group">
+                  <label for="eventType">Event Type *</label>
+                  <select id="eventType" name="eventType" required>
+                    <option value="" disabled selected>Select type</option>
+                    <option>Backyard BBQ / Cookout</option>
+                    <option>Birthday Party</option>
+                    <option>Graduation Party</option>
+                    <option>Wedding / Shower</option>
+                    <option>Corporate Event</option>
+                    <option>Holiday Party</option>
+                    <option>Block Party</option>
+                    <option>Other</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="guestCount">Guest Count *</label>
+                  <select id="guestCount" name="guestCount" required>
+                    <option value="" disabled selected>How many?</option>
+                    <option>Under 25</option>
+                    <option>25–50</option>
+                    <option>50–100</option>
+                    <option>100–200</option>
+                    <option>200+</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-row-2">
+                <div class="form-group">
+                  <label for="eventDate">Event Date *</label>
+                  <input type="date" id="eventDate" name="eventDate" required />
+                </div>
+                <div class="form-group">
+                  <label for="budget">Budget Range</label>
+                  <select id="budget" name="budget">
+                    <option value="" disabled selected>Optional</option>
+                    <option>Under $500</option>
+                    <option>$500–$1,000</option>
+                    <option>$1,000–$2,500</option>
+                    <option>$2,500–$5,000</option>
+                    <option>$5,000+</option>
+                    <option>Not sure yet</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="notes">Anything we should know?</label>
+                <textarea id="notes" name="notes" rows="3" placeholder="Menu preferences, dietary restrictions, venue details..."></textarea>
+              </div>
+              <div class="form-row-2">
+                <div class="form-group">
+                  <label for="firstName">Your Name *</label>
+                  <input type="text" id="firstName" name="firstName" placeholder="First &amp; Last" required />
+                </div>
+                <div class="form-group">
+                  <label for="phone">Phone / Text *</label>
+                  <input type="tel" id="phone" name="phone" placeholder="(978) 555-0100" required />
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="email">Email Address *</label>
+                <input type="email" id="email" name="email" placeholder="you@example.com" required />
+              </div>
+              <button type="submit" class="btn btn--red btn--full btn--lg">Send Quote Request 🔥</button>
+            </div>
+            <div class="form-success" id="formSuccess" style="display:none;">
+              <div class="form-success__icon">🔥</div>
+              <h3>Let's Get It!</h3>
+              <p>We got your request. We'll be in touch within 24 hours.</p>
+              <a href="tel:9787294757" class="btn btn--red">Need it faster? Call us.</a>
+            </div>
+          </form>
+        </div>
+        <div class="quote-sidebar">
+          <div class="quote-sidebar__card">
+            <h4>Call or Text</h4>
+            <a href="tel:9787294757" class="quote-sidebar__phone">978-729-4757</a>
+            <a href="tel:9787290143" class="quote-sidebar__phone">978-729-0143</a>
+          </div>
+          <div class="quote-sidebar__card">
+            <h4>Catering Includes</h4>
+            <ul class="sidebar-list">
+              <li>✔ Custom menu planning</li>
+              <li>✔ On-site cooking &amp; service</li>
+              <li>✔ Setup &amp; breakdown</li>
+              <li>✔ Licensed &amp; insured</li>
+              <li>✔ 25-mile service radius</li>
+            </ul>
+          </div>
+          <div class="quote-sidebar__card quote-sidebar__card--dark">
+            <img src="src/images/logo.png" onerror="this.style.display='none'" alt="WTF Catering" class="sidebar-logo" />
+            <p>Where's The Fork<br /><strong>Food Truck</strong></p>
+            <p class="sidebar-small">Available for private events &amp; festivals</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       HOURS
+  ═══════════════════════════════════════════ -->
+  <section class="hours-section" id="hours">
+    <div class="container hours-section__inner">
+      <div class="hours-section__text">
+        <span class="section-label">Find Us</span>
+        <h2 class="section-title section-title--light">HOURS &amp;<br />LOCATION</h2>
+        <div class="fire-divider fire-divider--left"></div>
+        <div class="hours-list">
+          <div class="hours-row">
+            <span>Tuesday – Thursday</span>
+            <span class="hours-time">5:00 – 9:00 PM</span>
+          </div>
+          <div class="hours-row">
+            <span>Friday</span>
+            <span class="hours-time">11AM–1:30PM &amp; 5–9PM</span>
+          </div>
+          <div class="hours-row">
+            <span>Saturday</span>
+            <span class="hours-time">5:00 – 9:00 PM</span>
+          </div>
+          <div class="hours-row">
+            <span>Sunday</span>
+            <span class="hours-time">Noon – 6:00 PM</span>
+          </div>
+          <div class="hours-row hours-row--closed">
+            <span>Monday</span>
+            <span class="hours-time">Closed</span>
+          </div>
+        </div>
+        <p class="hours-note">Hours may vary when we're out catering events.<br />Call ahead or check our socials to confirm.</p>
+      </div>
+      <div class="hours-section__contact">
+        <div class="contact-card">
+          <h4>📍 Location</h4>
+          <p>Billerica, MA<br /><small>Serving a 25-mile radius</small></p>
+        </div>
+        <div class="contact-card">
+          <h4>📞 Call or Text</h4>
+          <a href="tel:9787294757">978-729-4757</a>
+          <a href="tel:9787290143">978-729-0143</a>
+        </div>
+        <div class="contact-card">
+          <h4>🌐 Follow Along</h4>
+          <div class="social-links">
+            <a href="https://www.instagram.com" target="_blank" rel="noopener">Instagram</a>
+            <a href="https://www.facebook.com" target="_blank" rel="noopener">Facebook</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       TESTIMONIALS
+  ═══════════════════════════════════════════ -->
+  <section class="reviews-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">The Word</span>
+        <h2 class="section-title">PEOPLE ARE<br />TALKING.</h2>
+        <div class="fire-divider"></div>
+      </div>
+      <div class="reviews-grid">
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <blockquote>"These burgers are no joke. Best I've had in Billerica by a mile. The cheesesteak is ridiculous too — came back three times in one week."</blockquote>
+          <cite>— Danny M., Billerica</cite>
+        </div>
+        <div class="review-card review-card--hot">
+          <div class="review-stars">★★★★★</div>
+          <blockquote>"Booked WTF for our company summer event — 100 people. They knocked it out. The food was unreal and they handled everything. Already rebooked for the holiday party."</blockquote>
+          <cite>— Sarah K., Corporate Event · Chelmsford</cite>
+        </div>
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <blockquote>"The loaded fries almost made me cry. That's all I'm going to say. Book them before they get too famous and won't return your calls."</blockquote>
+          <cite>— Mike R., Lowell</cite>
+        </div>
+      </div>
+      <div class="reviews-cta">
+        <a href="https://www.google.com/search?q=what+the+fork+catering+billerica" target="_blank" rel="noopener" class="btn btn--outline">Read All Google Reviews</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       FAQ
+  ═══════════════════════════════════════════ -->
+  <section class="faq-section" id="faq">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">FAQ</span>
+        <h2 class="section-title">GOT QUESTIONS?</h2>
+        <div class="fire-divider"></div>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">How far in advance should I book? <span class="faq-icon">+</span></button>
+          <div class="faq-answer"><p>2–4 weeks minimum for smaller events; 4–8 weeks for 100+ guests or peak summer weekends. Last-minute? Call us anyway — we'll see what we can do.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">What's the minimum for catering? <span class="faq-icon">+</span></button>
+          <div class="faq-answer"><p>We typically book events with a minimum of 20 guests. Reach out and we'll talk through the specifics.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">Does catering include setup and cleanup? <span class="faq-icon">+</span></button>
+          <div class="faq-answer"><p>Yes. We arrive before your guests, we set up, we cook, we clean up. You do nothing except eat and take credit for it.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">Can you handle dietary restrictions? <span class="faq-icon">+</span></button>
+          <div class="faq-answer"><p>Yes — vegetarian, vegan, gluten-free options available. Tell us when you book and we'll build it into your menu.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">Where do you serve? <span class="faq-icon">+</span></button>
+          <div class="faq-answer"><p>Based in Billerica, MA. We roll within about 25 miles — Lowell, Chelmsford, Burlington, Woburn, Bedford, Tewksbury and more. Not sure? Just ask.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       FOOTER
+  ═══════════════════════════════════════════ -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <img src="src/images/logo.png" onerror="this.style.display='none';this.nextElementSibling.style.display='block'" alt="WTF Catering" class="footer__logo" />
+        <span class="footer__logo-fallback">WTF</span>
+        <p>What The Fork — Billerica, MA<br />Food Truck &amp; Catering</p>
+        <div class="footer__social">
+          <a href="https://www.instagram.com" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          </a>
+          <a href="https://www.facebook.com" target="_blank" rel="noopener" aria-label="Facebook">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer__col">
+        <h5>Quick Links</h5>
+        <a href="#menu">Menu</a>
+        <a href="#catering">Catering</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#hours">Hours</a>
+        <a href="#faq">FAQ</a>
+      </div>
+      <div class="footer__col">
+        <h5>Hours</h5>
+        <p>Tue–Thu: 5–9 PM</p>
+        <p>Fri: 11AM–1:30PM &amp; 5–9PM</p>
+        <p>Sat: 5–9 PM</p>
+        <p>Sun: Noon–6 PM</p>
+        <p>Mon: Closed</p>
+      </div>
+      <div class="footer__col">
+        <h5>Contact</h5>
+        <a href="tel:9787294757">📞 978-729-4757</a>
+        <a href="tel:9787290143">📞 978-729-0143</a>
+        <p>📍 Billerica, MA</p>
+        <p><small>Serving 25-mi radius</small></p>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <div class="container">
+        <p>© 2025 What The Fork · Billerica, MA · Licensed &amp; Insured</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Sticky mobile bar -->
+  <div class="sticky-cta" id="stickyCta">
+    <a href="tel:9787294757" class="btn btn--dark-solid">📞 Call</a>
+    <a href="#catering" class="btn btn--red">Book Catering</a>
+  </div>
+
+  <script src="script.js"></script>
+  <script type="module" src="burger3d.js"></script>
+</body>
+</html>

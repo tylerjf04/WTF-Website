@@ -118,11 +118,12 @@ async function initCursor() {
   fitModel(model, 2.0);
   scene.add(model);
 
-  const SPRING  = 0.08;
-  const DAMPING = 0.72;
+  const STRING_L = 80;  /* px gap between cursor and burger */
+  const SPRING   = 0.1;
+  const DAMPING  = 0.72;
 
   let mx = window.innerWidth  / 2, my = window.innerHeight / 2;
-  let bx = mx, by = my;
+  let bx = mx, by = my + STRING_L;
   let vx = 0,  vy = 0;
   let visible = false;
 
@@ -134,9 +135,15 @@ async function initCursor() {
     canvas.style.opacity = visible ? '1' : '0';
     if (!visible) return;
 
-    /* Spring toward cursor */
-    vx += (mx - bx) * SPRING;
-    vy += (my - by) * SPRING;
+    /* Target = STRING_L away from cursor in the burger's current direction */
+    const dx   = bx - mx;
+    const dy   = by - my;
+    const dist = Math.sqrt(dx * dx + dy * dy) || 1;
+    const tx   = mx + (dx / dist) * STRING_L;
+    const ty   = my + (dy / dist) * STRING_L;
+
+    vx += (tx - bx) * SPRING;
+    vy += (ty - by) * SPRING;
     vx *= DAMPING;
     vy *= DAMPING;
     bx += vx;

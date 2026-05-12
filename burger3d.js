@@ -118,11 +118,12 @@ async function initCursor() {
   fitModel(model, 2.0);
   scene.add(model);
 
-  const ORBIT_R    = 64;
-  const ORBIT_SPEED = 0.015; /* radians per frame */
+  const SPRING  = 0.08;
+  const DAMPING = 0.72;
 
-  let angle = 0;
-  let mx = window.innerWidth / 2, my = window.innerHeight / 2;
+  let mx = window.innerWidth  / 2, my = window.innerHeight / 2;
+  let bx = mx, by = my;
+  let vx = 0,  vy = 0;
   let visible = false;
 
   document.addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; visible = true; });
@@ -133,12 +134,22 @@ async function initCursor() {
     canvas.style.opacity = visible ? '1' : '0';
     if (!visible) return;
 
-    angle += ORBIT_SPEED;
+    /* Spring toward cursor */
+    vx += (mx - bx) * SPRING;
+    vy += (my - by) * SPRING;
+    vx *= DAMPING;
+    vy *= DAMPING;
+    bx += vx;
+    by += vy;
 
-    canvas.style.left = (mx + ORBIT_R * Math.cos(angle)) + 'px';
-    canvas.style.top  = (my + ORBIT_R * Math.sin(angle)) + 'px';
+    canvas.style.left = bx + 'px';
+    canvas.style.top  = by + 'px';
 
-    model.rotation.y += 0.04;
+    /* Spin faster when moving fast, tilt in direction of travel */
+    const speed = Math.sqrt(vx * vx + vy * vy);
+    model.rotation.y += 0.01 + speed * 0.008;
+    model.rotation.z  = -vx * 0.04;
+    model.rotation.x  =  vy * 0.04;
 
     renderer.render(scene, camera);
   })();

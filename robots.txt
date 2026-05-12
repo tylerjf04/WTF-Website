@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://tylerjf04.github.io/WTF-Website/sitemap.xml

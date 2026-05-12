@@ -118,14 +118,11 @@ async function initCursor() {
   fitModel(model, 2.0);
   scene.add(model);
 
-  const ORBIT_R   = 64;
-  const SPRING    = 0.14;  /* how snappily angle chases the trail target */
-  const IDLE_SPIN = 0.018; /* slow orbit when mouse is still */
+  const ORBIT_R    = 64;
+  const ORBIT_SPEED = 0.015; /* radians per frame */
 
-  let angle  = Math.PI;    /* start behind */
-  let spinY  = 0;
+  let angle = 0;
   let mx = window.innerWidth / 2, my = window.innerHeight / 2;
-  let pmx = mx, pmy = my;
   let visible = false;
 
   document.addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; visible = true; });
@@ -136,32 +133,12 @@ async function initCursor() {
     canvas.style.opacity = visible ? '1' : '0';
     if (!visible) return;
 
-    /* Smoothed velocity */
-    const vx = mx - pmx, vy = my - pmy;
-    pmx += vx * 0.3; pmy += vy * 0.3;
-    const speed = Math.sqrt(vx * vx + vy * vy);
-
-    if (speed > 0.8) {
-      /* Trail target = OPPOSITE of the movement direction */
-      const target = Math.atan2(vy, vx) + Math.PI;
-      /* Shortest-path angle delta */
-      let da = target - angle;
-      da = ((da % (Math.PI * 2)) + Math.PI * 3) % (Math.PI * 2) - Math.PI;
-      angle += da * SPRING;
-      spinY += speed * 0.06;
-      model.rotation.z = -da * 0.4;
-    } else {
-      /* Idle: drift slowly */
-      angle += IDLE_SPIN;
-      spinY += IDLE_SPIN * 2;
-      model.rotation.z *= 0.9;
-    }
+    angle += ORBIT_SPEED;
 
     canvas.style.left = (mx + ORBIT_R * Math.cos(angle)) + 'px';
     canvas.style.top  = (my + ORBIT_R * Math.sin(angle)) + 'px';
 
-    model.rotation.y = spinY;
-    model.rotation.x = vy * 0.03;
+    model.rotation.y += 0.04;
 
     renderer.render(scene, camera);
   })();
